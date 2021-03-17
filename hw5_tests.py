@@ -106,29 +106,31 @@ class TestCard(unittest.TestCase):
     def test_q6(self):
         '''
         1. fill in your test method for question 6:
-        
+
         Test that if you invoke the deal_card method on a deck, the deck has one fewer cards in it afterwards.
-        
+
         2. remove the pass command
-        
-        3. uncomment the return command and 
+
+        3. uncomment the return command and
         3b. change X, Y to the values from your assert statement
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        pass
-        #return X, Y    
-    
+        d1 = hw5_cards.Deck()
+        d1.deal_card()
+        self.assertEqual(len(d1.cards), 51)
+        return len(d1.cards), 51
+
 
     def test_q7(self):
         '''
         1. fill in your test method for question 7:
         Test that if you invoke the replace_card method, the deck has one more card in it afterwards. (Please note that you want to use deal_card function first to remove a card from the deck and then add the same card back in)
 
-        
+
         2. remove the pass command
-        
-        3. uncomment the return command and 
+
+        3. uncomment the return command and
         3b. change X, Y to the values from your assert statement
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
