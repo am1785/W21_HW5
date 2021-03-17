@@ -148,16 +148,20 @@ class TestCard(unittest.TestCase):
         1. fill in your test method for question 8:
         Test that if you invoke the replace_card method with a card that is already in the deck, the deck size is not affected.(The function must silently ignore it if you try to add a card that’s already in the deck)
 
-        
+
         2. remove the pass command
-        
-        3. uncomment the return command and 
+
+        3. uncomment the return command and
         3b. change X, Y to the values from your assert statement
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        pass
-        #return X, Y  
+        d1 = hw5_cards.Deck()
+        d2 = d1
+        c = hw5_cards.Card(0,2)
+        d1.replace_card(c)
+        self.assertEqual(len(d1.cards), len(d2.cards))
+        return len(d1.cards), len(d2.cards)
 
 
 
